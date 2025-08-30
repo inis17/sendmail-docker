@@ -1,0 +1,15 @@
+services:
+  sendmail:
+    image: inis17/sendmail
+    ports:
+      - "8085:3456"
+    environment:
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=yourgmail@gmail.com
+      - SMTP_PASS=your-app-password
+      - PORT=3456
+      # Make it long an complex, use it as auth bearer in your http request
+      - API_TOKEN=supersecrettoken
+      # Uncomment the line below if you want to change the http server port
+      # - PORT=6789
