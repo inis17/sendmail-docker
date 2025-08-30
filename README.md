@@ -79,7 +79,7 @@ services:
       - SMTP_USER=your@gmail.com
         # You can append _FILE to load from a file inside the container (e.g. docker secrets)
       - SMTP_PASS=yourapppassword
-      - API_TOKEN=longrandomstring
+      - API_TOKEN=mysecrettoken
 ```
 
 ---
@@ -93,8 +93,8 @@ curl -X POST http://localhost:8080/v1/send \
   -d '{
         "from": "your@gmail.com",
         "to": ["your@gmail.com"],
-        "subject": "Homelab Alert",
-        "body": "Something went wrong!"
+        "subject": "Test",
+        "body": "Hello from Test"
       }'
 ```
 
