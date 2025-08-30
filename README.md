@@ -77,7 +77,7 @@ services:
       - SMTP_HOST=smtp.gmail.com
       - SMTP_PORT=587
       - SMTP_USER=your@gmail.com
-        # tou can append _FILE to load from a file inside the container (e.g. docker secrets)
+        # You can append _FILE to load from a file inside the container (e.g. docker secrets)
       - SMTP_PASS=yourapppassword
       - API_TOKEN=longrandomstring
 ```
@@ -129,4 +129,3 @@ curl -X POST http://localhost:8080/v1/send \
 * Authentication via Bearer token
 * Works with Gmail, Outlook, or any SMTP server
 * Supports Docker secrets (`*_FILE`)
-* Tiny, single binary service (\~10 MB with Go)
